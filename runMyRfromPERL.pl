@@ -19,11 +19,15 @@ sleep(3);
 print "running some R commands with pipe\n";
 sleep(1);
 open (Rinput, "| R --vanilla")||die "could not start R command line\n";
+print Rinput "library(datasets)\n";
 print Rinput "library(ggplot2)\n";
 print Rinput "library(gridExtra)\n";
-print Rinput "print('hello world')\n";
+print Rinput "data(iris)\n";
+print Rinput "head(iris)\n";
+print Rinput "summary(iris)\n";
 print Rinput "q()\n";# quit R 
 print Rinput "n\n";# save workspace image?
 close Rinput;
+print "end script\n";
 exit;
 #############################################
