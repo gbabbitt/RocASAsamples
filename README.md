@@ -6,7 +6,9 @@ This repo contains the R sample codes used in the BIOL672 Computational Statisti
 
 iris_code.R – a simple introductory script showing the essential anatomy (includes data input using readtable(), column extraction using subsetting operator, proper use of assignment operator, creation of dataframe, reshaping data with library(reshape2), one-way analysis of variance(ANOVA), exporting R console to a text file using sink(), plotting with library(ggplot2), and creating multipanel plots with library(grid).
 
-RunMyRfromPERL.pl – a perl script demonstrating control of iris_code.R with a system call, and sending single line R commands via an open pipe. 
+runMyRfromPERL.pl – a perl script demonstrating control of iris_code.R with a system call, and sending single line R commands via an open pipe. 
+
+runMyRfromPYTHON - a python script demonostrating control of iris_code.R with the subprocess command from the os module
 
 A variety of multivariate stats functions are demonstrated 
 myIRIS_MLR.r – multiple linear regression
