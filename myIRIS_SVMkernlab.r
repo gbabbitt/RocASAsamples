@@ -4,7 +4,7 @@ library('kernlab')
 library('ggplot2')
 library('dplyr') # for resampling
 library('caret') # for confusion matrix
-data = read.table('/home/microcarbon/Desktop/iris_tab_integer.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_tab_integer.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width

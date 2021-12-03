@@ -3,7 +3,7 @@ print("hello Greg...welcome to R")
 
 library('ggplot2')
 
-data = read.table('C:/Users/gabsbi/Desktop/MyRscript/REDUCE_CLASSIFYdatasets/GoodTeachSurvey_tab.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/GoodTeachSurvey_tab.txt', header = TRUE)
 expectation = data$Expect; 
 entertain = data$Entertain; 
 communicate = data$Comm; 

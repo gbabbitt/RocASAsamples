@@ -5,7 +5,7 @@ library('class')
 library('dplyr') # for resampling
 library('caret') # for confusion matrix
 # note Sp must be integers when using distance based algorithm like KNN
-data = read.table('/home/microcarbon/Desktop/iris_tab_integer.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_tab_integer.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width
@@ -33,7 +33,7 @@ myplot1 <-ggplot(mysample, aes(PL, PW, colour = as.factor(Sp))) + geom_point()
 myplot2 <-ggplot(mysample, aes(SL, SW, colour = as.factor(Sp))) + geom_point()                                 
 myplot3 <-ggplot(subframe, aes(PL, PW, colour = as.factor(Sp))) + geom_point()
 myplot4 <-ggplot(subframe, aes(SL, SW, colour = as.factor(Sp))) + geom_point()                                 
-myKNN <- summary(mytest)
+myKNN <- summary(mypred)
 print(myKNN)
 myplot5 <-ggplot(subframe, aes(PL, PW, colour = mypred)) + geom_point()                                 
 myplot6 <-ggplot(subframe, aes(SL, SW, colour = mypred)) + geom_point()                                 

@@ -2,7 +2,7 @@
 print("hello Greg...welcome to R")
 library('mixtools')
 library('ggplot2')
-data = read.table('C:/Users/gabsbi/Desktop/MyRscript/REDUCE_CLASSIFYdatasets/iris_tab.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_tab.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width

@@ -4,7 +4,7 @@ library('mda') # for mixed model discriminants - need R>v3.5
 library('ggplot2')
 library('dplyr') # for resampling
 library('caret') # for confusion matrix
-data = read.table('C:/Users/gabsbi/Desktop/RocASAsamples/iris_tab.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_tab.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width

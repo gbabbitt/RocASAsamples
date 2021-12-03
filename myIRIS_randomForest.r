@@ -4,7 +4,7 @@ library('randomForest')
 library('ggplot2')
 library('dplyr') # for resampling
 library('caret') # for confusion matrix
-data = read.table('/home/microcarbon/Desktop/iris_tab.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_tab_integer.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width
@@ -20,6 +20,7 @@ print(mysample)
 myspecies = mysample[5:5]
 print(myspecies)
 #random forest classifier
+Sp = as.factor(Sp)
 mytest <-  randomForest(Sp~SL+SW+PL+PW, mysample, ntree = 500)
 mypred <- predict(mytest, subframe, probability = FALSE, decision.values = TRUE)
 myplot1 <-ggplot(mysample, aes(PL, PW, colour = Sp)) + geom_point()

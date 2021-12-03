@@ -3,7 +3,7 @@ print("hello, welcome to R")
 library('ggplot2')
 library('reshape2')
 
-data=read.table("/home/microcarbon/Desktop/iris_tab.txt",header=TRUE)
+data=read.table("C:/Users/gabsbi/Desktop/code-examples/R/iris_tab.txt",header=TRUE)
 sepal_length=data$sepal_length
 sepal_width=data$sepal_width
 petal_length=data$petal_length
@@ -63,7 +63,7 @@ print(petal_length.anova)
 print(petal_width.anova)
 
 # print means, ANOVA test, and summary to external file
-sink(file = '/home/microcarbon/Desktop/meansIRIS.txt')
+sink(file = 'C:/Users/gabsbi/Desktop/meansIRIS.txt')
 print(iris.means)
 print(summary(iris.means))
 print(sepal_length.anova)
@@ -86,9 +86,9 @@ plot4<- ggplot(iris.melt, aes(fill=species, y=value, x=variable)) +
 print(plot4)
 
 # put plots on single PDF page
-#library(grid)
-#pushViewport(viewport(layout = grid.layout(2, 2)))
-#print(plot1, vp = viewport(layout.pos.row = 1, layout.pos.col = 1))
-#print(plot2, vp = viewport(layout.pos.row = 1, layout.pos.col = 2))
-#print(plot3, vp = viewport(layout.pos.row = 2, layout.pos.col = 1))
-#print(plot4, vp = viewport(layout.pos.row = 2, layout.pos.col = 2))
+library(grid)
+pushViewport(viewport(layout = grid.layout(2, 2)))
+print(plot1, vp = viewport(layout.pos.row = 1, layout.pos.col = 1))
+print(plot2, vp = viewport(layout.pos.row = 1, layout.pos.col = 2))
+print(plot3, vp = viewport(layout.pos.row = 2, layout.pos.col = 1))
+print(plot4, vp = viewport(layout.pos.row = 2, layout.pos.col = 2))

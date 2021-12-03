@@ -5,7 +5,7 @@
 print("hello Greg...welcome to R")
 library('mclust')
 library('ggplot2')
-data = read.table('/home/microcarbon/Desktop/iris_tab.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_tab.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width

@@ -2,7 +2,7 @@
 print("hello Greg...welcome to R")
 
 library('ggplot2')
-data = read.table('C:/Users/gabsbi/Desktop/MyRscript/REDUCE_CLASSIFYdatasets/iris_size_tab.txt', header = TRUE)
+data = read.table('C:/Users/gabsbi/Desktop/code-examples/R/iris_size_tab.txt', header = TRUE)
 Sp = data$species; # species
 SL = data$sepal_length; # sepal length
 SW = data$sepal_width; # sepal width
@@ -14,7 +14,7 @@ print (dataframe)
 mytest <-  aov(formula = PL ~ SL*Sp, data = dataframe)
 Y <- cbind(SL,SW,PL,PW)
 print (Y)
-myplot <-pairs(Y, col=Sp)
+myplot <-pairs(Y, col=as.factor(Sp))
 myANCOVA <- summary(mytest)
 print(myANCOVA)
 print (myplot)
