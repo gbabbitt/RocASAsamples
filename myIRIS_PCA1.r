@@ -10,6 +10,7 @@ PL = data$petal_length; # petal length
 PW = data$petal_width; # petal width
 dataframe = data.frame(SL, SW, PL, PW)
 print (dataframe)
+#dataframe = subset(dataframe, Sp == "virginica")
 myPCA <-  prcomp(dataframe, scale = TRUE)
 plot(myPCA$x[,1], myPCA$x[,2])
 plot(myPCA$x[,2], myPCA$x[,3])
