@@ -46,8 +46,10 @@ print(myplot6, vp = viewport(layout.pos.row = 3, layout.pos.col = 2))
 
 # confusion matrix
 print(max.col(mypred))
-print(as.integer(Sp))
-mymatrix <- confusionMatrix(as.factor(max.col(mypred)), as.factor(as.integer(Sp)))
+Sp_factor <- as.factor(Sp)
+print(as.integer(Sp_factor))
+Sp_integer <- as.integer(Sp_factor)
+mymatrix <- confusionMatrix(as.factor(max.col(mypred)), as.factor(Sp_integer))
 print(mymatrix)
 print(plot(mytest))
 print("goodbye Greg...leaving R")
